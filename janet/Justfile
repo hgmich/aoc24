@@ -1,0 +1,14 @@
+test-isolated:
+    devenv test
+
+test:
+    judge
+
+snapshot:
+    judge -a
+
+sample EX:
+    jpm -l janet "exercises/{{EX}}.janet" < "inputs/{{EX}}_sample"
+
+solution EX:
+    jpm -l janet "exercises/{{EX}}.janet" < "inputs/{{EX}}_solution"
