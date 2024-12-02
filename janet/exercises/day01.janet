@@ -20,6 +20,7 @@
       (choice "\n" (any -1)))}))
 
 (test (peg/match input-peg "123  456\n456 789\n") @[[123 456] [456 789]])
+(test (peg/match input-peg "123  456\n456 789") @[[123 456] [456 789]])
 
 (defn sum-dist [l1 l2]
   (let [dists (map (fn [[x y]] (math/abs (- x y))) (zip l1 l2))]
