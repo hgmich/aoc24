@@ -5,8 +5,5 @@ devenv.local.nix
 # direnv
 .direnv
 
-# pre-commit
-.pre-commit-config.yaml
-
 jpm_tree/
 build/
