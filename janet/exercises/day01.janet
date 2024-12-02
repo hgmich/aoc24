@@ -1,14 +1,5 @@
 (use judge)
-
-(defn unzip2 [ps]
-  (let [xs @[] ys @[]]
-    (each [x y] ps (do
-      (array/push xs x)
-      (array/push ys y)))
-    [xs ys]))
-
-(defn zip [l1 l2]
-  (map tuple l1 l2))
+(use ../lib/util)
 
 (def input-peg (peg/compile
   ~{:main (any :lines)
