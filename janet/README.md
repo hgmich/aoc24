@@ -51,5 +51,24 @@ The answer to part 2 is: <your answer>
 
 ## Miscellaneous
 
+### Generating test snapshots
+
 The solutions here use `judge`, a snapshot testing framework.
 To generate snapshots for tests without test cases, run
+
+```console
+$ just snapshot
+```
+
+### REPL
+
+You can obtain a REPL with all of the module declarations in scope with `just repl EX`.
+Example:
+
+```console
+$ just repl day01
+jpm -l janet -l "./exercises/day01"
+Janet 1.33.0-release macos/aarch64/clang - '(doc)' for help
+repl:1:>
+```
+
