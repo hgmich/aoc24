@@ -28,3 +28,8 @@
 
 (defn string-zip [& ls]
   (map string/from-bytes ;ls))
+
+(defn table-set
+  "Turn an indexable (array, tuple, etc) into a table with keys set to true, for use like a set."
+  [ind]
+  (table ;(mapcat (fn [i] [i true]) ind)))
